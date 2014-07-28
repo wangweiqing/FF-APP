@@ -12,7 +12,7 @@
 		class="com.wwq.calculator.ArithmeticCalculatorImpl" />
 	<bean id="unitCalculator"
 		class="com.wwq.calculator.UnitCalculatorImpl" />
-	
+	<bean class="com.wwq.calculator.CalculatorLoggingAspect" />
 	
 
 

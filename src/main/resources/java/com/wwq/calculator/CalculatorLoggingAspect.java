@@ -16,7 +16,6 @@ public class CalculatorLoggingAspect {
 	@Before("execution(* ArithmeticCalculator.add(..))")
 	public void logBefore(){
 		logger.info("The method add() begins");
-		System.out.println("The method add() begins test!!!");
 	}
 	/**
 	 * @param args
