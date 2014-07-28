@@ -1,17 +1,22 @@
 package com.wwq.calculator;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
+
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 
+@Aspect
 public class CalculatorLoggingAspect {
+	/**
+	 * Logger for this class
+	 */
+	private static final Logger logger = Logger.getLogger(CalculatorLoggingAspect.class);
 
-	private Log log = LogFactory.getLog(this.getClass());
 	
 	@Before("execution(* ArithmeticCalculator.add(..))")
 	public void logBefore(){
-		log.info("The method add() begins");
+		logger.info("The method add() begins");
+		System.out.println("The method add() begins test!!!");
 	}
 	/**
 	 * @param args
