@@ -16,15 +16,15 @@ public class Main {
 				"src/main/webapp/WEB-INF/applicationContext.xml");
 		ArithmeticCalculator arithmeticCalculator = (ArithmeticCalculator) context
 				.getBean("arithmeticCalculator");
-		arithmeticCalculator.add(1, 2);
+	/*	arithmeticCalculator.add(1, 2);*/
 		arithmeticCalculator.sub(4, 3);
-		arithmeticCalculator.mul(2, 3);
-		arithmeticCalculator.div(4, 2);
+	/*	arithmeticCalculator.mul(2, 3);
+		arithmeticCalculator.div(4, -1);*/
 
-		UnitCalculator unitCalculator = (UnitCalculator) context
+	/*	UnitCalculator unitCalculator = (UnitCalculator) context
 				.getBean("unitCalculator");
 		unitCalculator.kilogramToMile(5);
-		unitCalculator.kilogramToPound(10);
+		unitCalculator.kilogramToPound(10);*/
 	}
 
 }

@@ -9,6 +9,7 @@ public class ArithmeticCalculatorImpl implements ArithmeticCalculator {
 		return result;
 	}
 
+	@LoggingRequired
 	public double sub(double a, double b) {
 		// TODO Auto-generated method stub
 		double result = a - b;

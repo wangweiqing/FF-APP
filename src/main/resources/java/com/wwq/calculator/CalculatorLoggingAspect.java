@@ -11,9 +11,10 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.core.Ordered;
 
 @Aspect
-public class CalculatorLoggingAspect {
+public class CalculatorLoggingAspect implements Ordered{
 	/**
 	 * Logger for this class
 	 */
@@ -94,12 +95,22 @@ public class CalculatorLoggingAspect {
 			throw e;
 		}
 	}
+	
+	@After(value = "@annotation (com.wwq.calculator.LoggingRequired)")
+	public void loggingRequired(){
+		logger.info("JUST TEST!!!JUST TEST!!!JUST TEST!!!");
+	}
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+	}
+	@Override
+	public int getOrder() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
