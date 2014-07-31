@@ -100,6 +100,13 @@ public class CalculatorLoggingAspect implements Ordered{
 	public void loggingRequired(){
 		logger.info("JUST TEST!!!JUST TEST!!!JUST TEST!!!");
 	}
+	
+	@Before("execution(* *.*(..)) && target(target) && args(a,b)")
+	public void logParameter(Object target, double a, double b) {
+		logger.info("logParameter() is working");
+		logger.info("Target class : " + target.getClass().getName());
+		logger.info("Arguments : " + a + ", " + b);
+	}
 	/**
 	 * @param args
 	 */
