@@ -17,9 +17,14 @@ public class Main {
 		ArithmeticCalculator arithmeticCalculator = (ArithmeticCalculator) context
 				.getBean("arithmeticCalculator");
 	/*	arithmeticCalculator.add(1, 2);*/
-		arithmeticCalculator.sub(4, 3);
+	/*	arithmeticCalculator.sub(4, 3);*/
 	/*	arithmeticCalculator.mul(2, 3);
 		arithmeticCalculator.div(4, -1);*/
+		MaxCalculator maxCalculator = (MaxCalculator) arithmeticCalculator;
+		maxCalculator.max(1, 2);
+		MinCalculator minCalculator = (MinCalculator) arithmeticCalculator;
+		minCalculator.min(1, 2);
+		
 
 	/*	UnitCalculator unitCalculator = (UnitCalculator) context
 				.getBean("unitCalculator");
