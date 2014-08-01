@@ -15,7 +15,19 @@
 	<bean class="com.wwq.calculator.CalculatorLoggingAspect" />
 	<bean class="com.wwq.calculator.CalculatorValidationAspect"/>
 	<bean class="com.wwq.calculator.CalculatorIntroduction"/>
-	
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="org.postgresql.Driver"/>
+		<property name="url"
+			value="jdbc:postgresql://localhost:5432/bookshop"/>
+		<property name="username" value="weiqingwang"/>
+		<property name="password" value="wwqwwq"/>
+	</bean>
+	<bean id="bookShop"
+		class="com.wwq.bookshop.JdbcBookShop">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
 
 
     <!-- more bean definitions go here -->
