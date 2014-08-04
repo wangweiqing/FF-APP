@@ -22,7 +22,7 @@
 		<property name="url"
 			value="jdbc:postgresql://localhost:5432/bookshop"/>
 		<property name="username" value="weiqingwang"/>
-		<property name="password" value="wwqwwq"/>
+		<property name="password" value="123456"/>
 	</bean>
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
