@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 	<bean id="reservationService" class="com.wwq.court.service.ReservationServiceImpl" />
-	<bean class="com.wwq.court.web.ReservationQueryController">
+<!-- 	<bean class="com.wwq.court.web.ReservationQueryController">
 		<property name="reservationService" ref="reservationService" />
-	</bean>
+	</bean> -->
 </beans>

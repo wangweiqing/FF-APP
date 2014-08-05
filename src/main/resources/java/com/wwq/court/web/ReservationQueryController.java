@@ -18,7 +18,8 @@ public class ReservationQueryController {
 
 	private ReservationService reservationService;
 
-	public void ReservationQueryController(ReservationService reservationService) {
+	@Autowired
+	public void setReservationService(ReservationService reservationService) {
 		this.reservationService = reservationService;
 	}
 
