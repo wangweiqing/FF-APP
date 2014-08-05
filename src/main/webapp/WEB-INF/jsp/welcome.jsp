@@ -10,5 +10,7 @@
 <body>
 <h2>Welcom to Court Reservation System</h2><%-- ${requestScope.day} --%>
 Today is <fmt:formatDate value="${today}" pattern="yyyy-MM-dd" />.
+<hr />
+Handling time: ${handlingTime} ms
 </body>
 </html>
